@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saloni | Marketing Consultant</title>
+    <style>
+      body, html {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          scroll-behavior: smooth;
+          overflow-x: hidden; 
+      }
+       
+      header {
+          background-color: #000;
+          color: #FFD700;
+          padding: 60px 20px 20px 20px;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+      }
+      
+      header::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 150px;
+          background-color: #FFD700;
+          clip-path: ellipse(70% 30% at 50% 0%);
+          z-index: -1;
+      }
+      nav {
+          margin-top: 20px;
+      }
+      nav a {
+          color: white;
+          margin: 0 15px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 16px;
+      }
+      .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      .logo {
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 1;
+    }
+    .intro {
+      background-color: #FFD700;
+      padding: 60px 20px;
+      text-align: start;
+  }
+  .intro h1 {
+      margin: 0;
+      font-size: 36px;
+      text-align: start;
+  }
+  .intro p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #ffffff;
+      text-align: start;
+  }
+  
+    .navbar {
+        margin-top: 10px;
+    }
+  
+    .navbar a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+  
+    .social-icons {
+        margin-top: 20px;
+    }
+  
+    .social-icons a {
+        color: #fff;
+        margin: 0 8px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    
+    .btn {
+      background-color: transparent; 
+      color: #000000; 
+      padding: 10px 20px; 
+      text-decoration: none;
+      margin-top: 20px;
+      display: inline-block;
+      font-weight: bold;
+      border: 2px solid #000000; 
+      border-radius: 5px;
+      text-align: center; 
+      cursor: pointer; 
+  }
+  
+  .btn:hover {
+      background-color: #000000; 
+      color: #FFFFFF; 
+      transition: background-color 0.3s ease; 
+  }
+  
+      .about {
+          background-color: #ffffff;
+          padding: 80px 20px;
+          text-align: center;
+      }
+      .about h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+          
+      }
+      .about p {
+          max-width: 700px;
+          margin: auto;
+          color: #000000;
+          line-height: 1.6;
+          font-size: 12px;
+      }
+      
+      .about1 h3{
+          color: #e8e7e4;
+      }
+      .about1 {
+          background-color: #000;
+          color: #e8e7e4;
+          padding: 60px 20px 20px 20px;
+          text-align: center;
+          position: relative;
+      }
+  
+      .btn2 {
+          background-color: rgb(228, 228, 23);
+          color: white;
+          padding: 12px 30px;
+          text-decoration: none;
+          margin-top: 20px;
+          display: inline-block;
+          font-weight: bold;
+          border-radius: 5px;
+      }
+      .para {
+          background-color: #ffffff;
+      }
+      .hed {
+        color: #FFD700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+  
+    .about h4 {
+      color: #000; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      width: 100%;
+      margin: 20px 0; 
+  }
+  
+  .section-container {
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      width: 100%; 
+      margin: auto; 
+  }
+  
+  .centered-text {
+      font-size: 24px; 
+      font-weight: bold;
+      text-align: center;
+      margin: 50px auto; 
+  }
+  
+  
+      .img, .img2 {
+          width: 100px;
+          height: 100px;
+          display: flex;
+          border-radius: 50%;
+      }
+      
+      .y {
+          font-family: Arial, sans-serif;
+          background-color: #000; 
+          color: #fff; 
+          text-align: center;
+          margin: 0; 
+          color: #ffd700; 
+      }
+  
+      .container {
+          background-color: #000;
+          color: #e8e7e4;
+          display: flex;
+          justify-content: center; 
+          gap: 50px; 
+          flex-wrap: wrap; 
+      }
+  
+      .column {
+          max-width: 300px;
+      }
+  
+      .column h2 {
+          font-size: 18px;
+          margin-bottom: 10px;
+      }
+  
+      .column p {
+          font-size: 14px;
+          line-height: 1.6;
+      }
+      .work {
+          color: #FFD700;
+          text-align: center;
+      }
+      .logo-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 50px;
+          padding: 30px;
+          background-color: #f9f9f9;
+      }
+      .logo-item {
+          width: 150px;
+          height: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #ddd;
+          background-color: #fff;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+      }
+      .logo-item img {
+          max-width: 100%; 
+          max-height: 100%;
+          border-radius: 5px;
+      }
+  </style>
+  
+</head>
+<body>
+
+<header>
+    <div class="logo">SALONI<br>SALONI</div>
+    <nav>
+        <a href="#about"id="about">About Me</a>
+        <a href="/page 3//page.html">Portfolio</a>
+        <a href="/page 5//page5.html">Marketing Consultancy</a>
+        <a href="/page 2/page2.html">Expertise</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="intro">
+    <h1>Hi, I'm Saloni.</h1>
+    <p>I'm a Marketing Consultant focused on social media, content, and research-driven strategies.</p>
+    <a href="#" class="btn">HOW I CAN HELP</a>
+</section>
+
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        Hey there! I’m Saloni, a passionate marketer and strategist with a flair for blending creativity and data-driven insights. With nearly a decade of experience
+         and studies in Design,art and marketing, I specialize in social media management, content creation, and innovative marketing strategies that deliver 
+         tangible results. My journey began with a Bachelor's in Product Design and a master’s in marketing, equipping me with the perfect toolkit to craft compelling
+          narratives that resonate with audiences.
+        As an art lover, I see every marketing challenge as a canvas waiting to be painted. Whether it's designing eye-catching visuals, orchestrating vibrant social 
+        media campaigns, or diving deep into market research, I thrive on bringing brands to life through creativity and strategy. I believe in the power of genuine 
+        connections and honest conversations, and I’m here to help your brand shine in a crowded marketplace.
+        Let’s connect and elevate your brand together!  
+    </p>
+</section>
+<section class="about1">
+<h3>Resume</h3>
+<p >Explore my resume and professional timelineto see how my marketing expertise and creative vision can bring value to your team!"</p> 
+<a href="#" class="btn2">View and Download</a>
+</section>
+<h4 class="hed"> Industries </h4>
+<div class="img">
+
+<img src="https://informationage-production.s3.amazonaws.com/uploads/2022/10/edtech-trends-for-near-future.jpeg" style="margin: 10px 50px 10px 60px;" alt="edtech">
+<img src="https://images.theconversation.com/files/544629/original/file-20230824-17-yoegke.jpg?ixlib=rb-4.1.0&rect=44%2C35%2C5832%2C3882&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" style="margin: 10px 50px 10px 60px;">
+<img src="https://us.softbankrobotics.com/hubfs/SBRA.%20Hospitality%20Service%20Blog%20800.jpg" style="margin: 10px 50px 10px 60px;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Fredmeyer_edit_1.jpg" style="margin: 10px 50px 10px 60px;">
+<img src="https://explore.movista.com/hubfs/AdobeStock_287505501.jpeg" style="margin: 10px 50px 10px 60px;">
+<img src="https://media.gettyimages.com/id/1353425102/photo/over-the-shoulder-view-of-young-man-checking-financial-data-with-mobile-banking-app-on-smart.jpg?s=612x612&w=gi&k=20&c=pRsBGsBisJR6hn8EFKoR9_OhedenkaFNWy1D69NFJqg=" style="margin: 10px 50px 10px 60px;">
+</div>
+<div class="section-container">
+    <h4 class="centered-text">PROFESSIONAL DEVELOPMENT PLAN</h4>
+</div>
+
+<div class="img2">
+<img src="https://st2.depositphotos.com/3591429/6301/i/450/depositphotos_63016959-stock-photo-man-working-on-a-computer.jpg" style="margin: 10px 50px 10px 90px;">
+<img src="https://cdn.pixabay.com/photo/2016/12/23/12/40/night-1927265_1280.jpg" style="margin: 10px 50px 10px 90px;">
+<img src="https://images.unsplash.com/1/type-away-numero-dos.jpg?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fG1hbiUyMHdvcmtpbmclMjBvbiUyMGNvbXB1dGVyfGVufDB8fHx8MTczNjQ2ODA4MHww&ixlib=rb-4.0.3&q=85" style="margin: 10px 50px 10px 90px;">
+<img src="https://static2.bigstockphoto.com/5/4/2/large1500/245017117.jpg" style="margin: 10px 50px 10px 90px;">
+</div>
+
+<h1 class="y">What I Bring to Your Team</h1>
+<div class="container">
+<div class="column">
+<h2>Tailored Social Media Strategies</h2>
+<p>I am dedicated to crafting engaging social media content that resonates with your target audience, enhancing brand visibility and fostering community engagement.</p>
+</div>
+<div class="column">
+<h2>Research-Driven Insights</h2>
+<p>I leverage comprehensive market research to inform creative strategies, ensuring that every campaign is aligned with the latest trends and consumer behavior.</p>
+</div>
+<div class="column">
+<h2>Commitment to Excellence</h2>
+<p>I am wholeheartedly committed to delivering transformational change for your organization, consistently striving for excellence in all our projects.</p>
+</div>
+</div>
+
+<h1 class="work">Companies I've Worked</h1>
+<div class="logo-container">
+<div class="logo-item">
+    <img src="https://assets-global.website-files.com/61b9a0d531bc5ea62566a3be/626b83e83f4410d67c23ba22_WhiteHatJr%201.jpg"alt="WhiteHat Jr">
+</div>
+<div class="logo-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qkb6PFgi3Nyk2rhMWVfU45eDDOoI1-ziCQ&s" alt="CH&CO">
+</div>
+<div class="logo-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3U8LigZPcBQQUAIvmwUNo9BA2juyVsOJEWQ&s" alt="Stoppers">
+</div>
+<div class="logo-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjqVanJhnEyH__8INFA1MGssuBlgmaRsDx3A&s" alt="WeFix Trade">
+</div>
+</div>
+
+<section class="testimonials">
+    <h2 class="testimonials-title">Testimonials</h2>
+    <div class="testimonials-container">
+        <div class="testimonial-box">
+            <p>
+                Saloni has been an exceptional asset to our marketing team at Byjus, where her contributions as a Marketing Product Specialist have had a notable impact. Her expertise in handling Salesforce and her strategic approach to product marketing have significantly advanced our projects.
+            </p>
+            <h4>Kishor Raj</h4>
+            <p class="position">VP of Marketing, Byjus</p>
+        </div>
+        <div class="testimonial-box">
+            <p>
+                Saloni proved to be an outstanding Marketing Executive during her time with us at WhiteHat Jr. Her keen insight and proactive approach were invaluable assets to our team. Saloni was instrumental in orchestrating mobile traffic campaigns that drove significant engagement and growth.
+            </p>
+            <h4>Chandresh Suvarna</h4>
+            <p class="position">Senior Manager, Marketing, WhiteHat Jr</p>
+        </div>
+        <div class="testimonial-box">
+            <p>
+                Saloni has been an invaluable asset to our team at TalentRise, Technokrate. Her expertise in content creation and social media strategy has consistently elevated our projects, allowing us to deliver impactful results for a diverse range of clients.
+            </p>
+            <h4>Team</h4>
+            <p class="position">TalentRise Technokrate</p>
+        </div>
+        <div class="testimonial-box">
+            <p>
+                Murad was quick and when we needed him to make tweaks to our site such as a new line of content, he was on board to change it, without hitting us with a bill. The best part was that we felt like he was really part of the team.
+            </p>
+            <h4>Devon</h4>
+            <p class="position">AMCO</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+    }
+    header {
+        background-color: #000;
+        color: #FFD700;
+        padding: 60px 20px 20px 20px;
+        text-align: center;
+        position: relative;
+    }
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background-color: #FFD700;
+        clip-path: ellipse(70% 30% at 50% 0%);
+        z-index: -1;
+    }
+    nav {
+        margin-top: 20px;
+    }
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .logo {
+        font-size: 60px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        line-height: 1.2;
+    }
+    .intro {
+        background-color: #FFD700;
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .intro h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+    .intro p {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+    .btn {
+        background-color: #000;
+        color: #FFD700;
+        padding: 12px 30px;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    .testimonials {
+        background-color: #FFD700;
+        padding: 60px 20px;
+        text-align: right;
+    }
+    .testimonials-title {
+        font-size: 32px;
+        color: #fff;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .testimonials-container {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 70px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .testimonial-box {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        width: 100%;
+        height: 200px;
+    }
+    .testimonial-box p {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.6;
+    }
+    .testimonial-box h4 {
+        margin-top: 15px;
+        font-size: 16px;
+        color: #000;
+    }
+    .testimonial-box .position {
+        font-size: 12px;
+        color: #777;
+    }
+    .lets-chat {
+        background-color: #000;
+        color: #FFD700;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .lets-chat h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .lets-chat .btn {
+        background-color: #FFD700;
+        color: #000;
+    }
+</style>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #fff;
+    }
+    .contact-section {
+      text-align: left;
+      padding: 40px 20px;
+    }
+    .contact-section h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .contact-section p {
+      font-size: 1.2rem;
+      color: #f7cf19;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .form-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    .form-group {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input,
+    .form-group textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .form-group textarea {
+      resize: none;
+      height: 100px;
+    }
+    .form-container .full-width {
+      width: 100%;
+    }
+    .comment-box {
+      width: 100%;
+      max-width: 1200px; 
+      height: 120px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      resize: vertical;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .submit-button {
+    display: inline-block;  
+    margin: 10px 0;           
+    padding: 8px 16px;       
+    font-size: 1rem;      
+    color: #fff;         
+    background-color: #000; 
+    border: none; 
+    border-radius: 4px;     
+    cursor: pointer;        
+}
+  
+  .submit-button:hover {
+      background-color: #f0f0f0; 
+  }
+  
+
+    .contact-container {
+        text-align: center;
+        max-width: 1080px;
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+      }
+  
+      .contact-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+  
+      .contact-column {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+      }
+  
+      .contact-column img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+  
+      .contact-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: center;
+      }
+  
+      .contact-text {
+        color: #000;
+        font-size: 16px;
+        text-align: center;
+        margin: 5px 0;
+      }
+  
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+  
+      .social-icons a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+      }
+  
+      .social-icons img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+  
+      .social-icons img:hover {
+        transform: scale(1.1);
+      }
+
+    .footer {
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 0.8rem;
+      }
+      
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+      
+      .footer a:hover {
+        text-decoration: underline;
+      }
+      
+  </style>
+</head>
+<body>
+  <section class="contact-section">
+    <h1>Let's Chat</h1>
+    <p>Hello, Saloni?</p>
+    <form>
+      <div class="form-container">
+        <div class="form-group">
+          <label for="first-name">First Name *</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name *</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone">
+        </div>
+        <div class="form-group full-width">
+          <label for="comments">Comments / Questions <span style="color: red;">*</span></label>
+<textarea id="comments" name="comments" rows="5" cols="50" class="comment-box" required></textarea>
+
+        </div>
+      </div>
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </section>
+
+  <div class="contact-container"  id="contact">
+    <div class="contact-row">
+      <!-- Phone Section -->
+      <div class="contact-column">
+        <img src="data:image/png;base64,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" alt="Phone Icon">
+        <p class="contact-text">+971 56 86 333 43</p>
+      </div>
+
+      <!-- Email Section -->
+      <div class="contact-column">
+        <p class="contact-title">Contact Details</p>
+        <img src="data:image/png;base64,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" alt="Email Icon">
+        <p class="contact-text">hello@muradmurad.com</p>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="contact-column">
+        <p class="contact-title">Let's Connect</p>
+        <div class="social-icons">
+          <a href="#"><img src="data:image/png;base64,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" alt="WhatsApp Icon"></a>
+          <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///8AAACmpqb5+fkgICDl5eXb29tfX19ubm58fHzz8/McHBzq6urNzc38/Pzw8PAPDw/X19c0NDSysrJPT0+srKx2dnYqKirf398VFRU9PT2IiIhGRkbFxcW6urpXV1eZmZllZWUxMTGSkpKWlpaBgYGfn59BQUGXtn/iAAAE9klEQVR4nO2dB3riQAxGYxxTXMCmmWYIEML9b7hxSNlQLGlgZyzv/w7gb16YqhkpT08AAAAAAACAOuDHwaw9Cwau2/Fv8JOXzjD1SqLFtjVz3Z5HE7wMvd9sRr7rRj2QYPnsXbKYNMZxcs2vZJW4btpDiDs3/Er2DfgZk7xC0PPGgesG3kuRVgq+j8bYdRPvI5kTgu+DUfXy2Cb9yo6qeCz2xxxDb++6nea8sAQ9T+2iMaNmmS9WrltqSpcp6HkT1001I2MLekedk82Bb+itXTfWhDASGG5dt9aEQiDopRrPi1OJoTdy3Vw5/k5k2HPdXjmBSFDjkihYK0ryvusGi1nLDOf6DlEjmaGn7yTcEhrqWy6a/xsKx2GqbxwmMsNc3967+ethWB1FPGfqur0G8M+/JRrPwLKpJnPdXAMGdKj0h42+TduTrJtq7KSi9WIXum6sGVWXTr95c91UQ9g/4k7fcv8JN9qmMtL2QXh+eX8dhRGMb1j9dKH6em1CC87brht5H6RirlyQvOYe6jvbX5CtKgS7+g6+VwiXN4egwkj3dbLtNb9oqXoSPSPrnd9EDfeN6KB/EYymw69JJzoeCqV7bYI4S4qiSNpN6p0AAAAAAACA/w4/HIS+2vB6FXGy3k87q2EepdFzvjuOO4dWkTXkgNpvj3qL69G+aDWdJNpPqtkrlQ6Rd0f3BFPiDpPuzRvgYsP7wJXR5a83hN5nwK8zMf4l2Q9O5jeHP/PtWHoxqMKJ4C1I2jMMvLMNn+81jM4M/dGC7/fBwaizOjNMeNlIv8hbBuuII8NBT+5XspAnJ7kxLG7l5NK8SN+8ODF8M9Ur2QpnVQeGfVkOxAXCjFb7hj5vCaxgJ3rJa91wYDCHniP6FW0bDqruYtmMBVtyy4b3d9ET3doabs2ELuHnJds1lKY/VMB+o2XVMOMmHTPYcZdFm4b9Bw3CE9x3aBYN/Qf20RLmo2x7hvnMfDN6FWbWrj3DVHocJClqZvh4xqxjhmZDXiUL1Yas6VS1ISupVbUhK39At+Gx8YacvF3lhoxuqtyw03jDiJ5NlRsyjonaDZeNN6TTPrUbPpNHfaeG8/H0rUhK1pNlh5didg65+3ZnOO+uf//9++2lgWSrrob567XQfPgmSb3+gDxfODLc3xo+wVb4pXEtDStTxbiFHD8hCx+5MCRq2gprylAXUQ4Mx9QEL/sgFVS0b5jTW0lRuQ5q32bfkBE+CiSR1de6GbKiR5KL/kPNDBl99J2B4AqHCn3bNmTWntjzv7ipl2HOvBNjFag+QUWjLBtyr277/Ov+nLjTt2zIfl/4yv5kRHQLu4bkJvIbQe1YYu6ya0itXT/E/EMGsW2za8h/WejzHxYRUWGrhpKiffznmcTG1KohtXSZfZXoGFYN6dDfD/waXcTW26qhpB7aTKUh72nBiZi9Na2ToaQsIb9qJVF8xaahqMKrz44s1siQu+0+ceR+lhjdNg1XomwJ9pJPxIRtGjKuM/+C/cyvRoayfx+xVWgoeLr8JAi4wdCioazSMgzraCirnwlDGMIQhjCEIQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMIQhjCEIQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMIQhjCEIQxh6NwwtZ1Dun2QYb/N5HYlnwH3E7L/CBdzP6v9f80CAAAAAACgkT8cAX1Rk70hTQAAAABJRU5ErkJggg==" alt="LinkedIn Icon"></a>
+          <a href="#"><img src="data:image/png;base64,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" alt="Instagram Icon"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="footer">
+        <div>
+          <a href="#about">About Me</a>
+          <a href="./page 5/page5.html">Marketing Consultant</a>
+          <a href="/page 2/page2.html">Expertise</a>
+          <a href="/page 3/page.html">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p>© 2025 | SaloniSaloni</p>
+      </footer>
+      
+  
+
+</body>
+</html>
