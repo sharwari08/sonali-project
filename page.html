@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 3</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .third-page-top-design {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .third-page-top-design img {
+        width: 100%;
+        height: auto;
+      }
+
+      .inside-text {
+        position: absolute;
+        top: 14%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .third-page-info {
+        width: 100%;
+        position: absolute;
+        width: 1313px;
+        height: 450px;
+        left: calc(50% - 1313px / 2);
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 40px;
+        /* or 150% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.05em;
+      }
+      .third-page-middle-part {
+        background-color: #ffd700;
+        position: absolute;
+        width: 100%;
+        height: 1011px;
+
+        top: 750px;
+        padding: 40px;
+      }
+      .third-page-middle-top {
+        display: flex;
+        width: 100%;
+        height: 50%;
+
+        padding-bottom: 5px;
+      }
+      .third-page-middle-top-left {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: #ffd700;
+        padding-right: 20px;
+      }
+      .third-page-middle-top-left-left {
+        width: 40%;
+        height: 100%;
+        background-color: rgb(233, 233, 238);
+        border-radius: 10px;
+      }
+      .third-page-middle-top-left-right {
+        display: flex;
+        width: 60%;
+        height: 100%;
+        background-color: white;
+        justify-content: center;
+
+        padding: 20px;
+        flex-wrap: wrap;
+        border-radius: 10px;
+      }
+      .third-page-middle-top-right {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: #ffd700;
+
+        padding-left: 20px;
+      }
+      .third-page-middle-top-right-left {
+        width: 40%;
+        height: 100%;
+        background-color: rgb(230, 230, 235);
+        border-radius: 10px;
+      }
+      .third-page-middle-top-right-right {
+        width: 60%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        padding: 20px;
+        flex-wrap: wrap;
+        border-radius: 10px;
+      }
+      .third-page-middle-bottom {
+        display: flex;
+        width: 100%;
+        height: 50%;
+
+        padding-top: 5px;
+      }
+      .third-page-middle-bottom-left {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: rgb(157, 255, 0);
+        background-color: #ffd700;
+
+        padding-right: 20px;
+      }
+      .third-page-middle-bottom-left-left {
+        width: 40%;
+        height: 100%;
+        background-color: hsl(240, 100%, 96%);
+        border-radius: 10px;
+      }
+      .third-page-middle-bottom-left-right {
+        width: 60%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+
+        padding: 20px;
+
+        flex-wrap: wrap;
+        border-radius: 10px;
+      }
+
+      .third-page-middle-bottom-right {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: rgb(89, 171, 171);
+        background-color: #ffd700;
+
+        padding-left: 20px;
+      }
+      .third-page-middle-bottom-right-left {
+        width: 40%;
+        height: 100%;
+        background-color: rgb(222, 222, 240);
+        border-radius: 10px;
+      }
+      .third-page-middle-bottom-right-right {
+        width: 60%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+
+        padding: 20px;
+        flex-wrap: wrap;
+        border-radius: 10px;
+      }
+
+      .third-page-bottom {
+        position: absolute;
+        width: 1244px;
+        height: 124px;
+        left: calc(50% - 1244px / 2 + 8px);
+        top: 1800px;
+
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 43px;
+        line-height: 60px;
+        /* or 140% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #ebc600;
+      }
+      .bottom-line {
+        position: absolute;
+        width: 1101.26px;
+        height: 43px;
+        left: calc(50% - 1101.26px / 2 + 0.13px);
+        top: 1950px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        /* or 120% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #7a7a7a;
+      }
+      footer {
+        position: absolute;
+        width: 100%;
+        height: 58px;
+        left: 0px;
+        top: 2030px;
+      }
+      .navbar {
+        background-color: black;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+      }
+      .navbar a:hover {
+        color: yellow;
+      }
+      .navbar .highlight {
+        color: yellow;
+      }
+      .navbar .copyright {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="third-page-top-design">
+      <img src="./top design logo.png" alt="Background Image" />
+      <div class="inside-text">
+        <h1
+          style="
+            position: absolute;
+            width: 744px;
+            height: 60px;
+            left: -100px;
+            top: 40px;
+
+            /* muradmurad.com/Semantic/Heading 2 */
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 40px;
+            /* or 100% */
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #ebc600;
+          "
+        >
+          Social Media Management & Growth
+        </h1>
+      </div>
+    </div>
+    <div class="third-page-info">
+      <div>
+        In my approach to social media management and growth, I see each
+        platform as a dynamic canvas, where visuals, tone, and strategy come
+        together to create an impactful brand experience. I believe social media
+        is far more than just posting—it’s a powerful tool to build connections,
+        drive engagement, and deliver measurable results. Drawing from my
+        background in product design and marketing, I blend creativity with
+        strategic insight to craft posts that not only captivate but also align
+        with each brand’s unique essence. My design sense sharpens my eye for
+        details like color palettes and brand aesthetics, while my analytical
+        skills ensure every element—from visuals to copy—works toward driving
+        real growth. The posts and campaigns I develop attract the right
+        audience, nurturing authentic engagement and turning metrics into
+        actionable insights that truly reflect each brand’s potential.
+      </div>
+    </div>
+    <div class="third-page-middle-part">
+      <div class="third-page-middle-top">
+        <div class="third-page-middle-top-left">
+          <div class="third-page-middle-top-left-left"></div>
+          <div
+            class="third-page-middle-top-left-right"
+            style="
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 25px;
+              /* or 125% */
+              display: flex;
+              align-items: center;
+              text-align: center;
+
+              color: #000000;
+            "
+          >
+            <center>
+              Brand Focus: <br /><br />
+
+              I approach each brand with a deep understanding of its
+              personality, ensuring that tone, visuals, and messaging remain
+              consistent and aligned. This brand-centric focus allows me to
+              create a strong, recognizable identity that resonates with target
+              audiences and builds trust over time.
+            </center>
+          </div>
+        </div>
+        <div class="third-page-middle-top-right">
+          <div class="third-page-middle-top-right-left"></div>
+          <div
+            class="third-page-middle-top-right-right"
+            style="
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 25px;
+              /* or 125% */
+              display: flex;
+              align-items: center;
+              text-align: center;
+
+              color: #000000;
+            "
+          >
+            <center>
+              Engagement: <br /><br />
+
+              I believe in fostering genuine interactions on social media. By
+              analyzing audience behavior and strategically planning content, I
+              create campaigns that not only capture attention but also
+              encourage interaction, driving engagement metrics, conversions,
+              and leads in a measurable way.
+            </center>
+          </div>
+        </div>
+      </div>
+      <div class="third-page-middle-bottom">
+        <div class="third-page-middle-bottom-left">
+          <div class="third-page-middle-bottom-left-left"></div>
+          <div
+            class="third-page-middle-bottom-left-right"
+            style="
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 25px;
+              /* or 125% */
+              display: flex;
+              align-items: center;
+              text-align: center;
+
+              color: #000000;
+            "
+          >
+            <div style="width: 100%">
+              Mentoring: <br /><br />
+
+              Whether working with small or large businesses, I take a
+              collaborative approach, offering insights and guidance to help
+              clients navigate social media effectively. From brainstorming
+              creative concepts to refining strategies, I empower brands to use
+              social media as a growth tool that reflects their core values and
+              goals.
+            </div>
+          </div>
+        </div>
+        <div class="third-page-middle-bottom-right">
+          <div class="third-page-middle-bottom-right-left"></div>
+          <div
+            class="third-page-middle-bottom-right-right"
+            style="
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 25px;
+              /* or 125% */
+              display: flex;
+              align-items: center;
+              text-align: center;
+
+              color: #000000;
+            "
+          >
+            Harnessing Social Media Expertise: <br /><br />
+              I don’t just offer services, I bring years of expertise in
+            transforming brands through the power of social media. By leveraging
+            data-driven insights and creative strategies, I ensure your social
+            presence is not just seen but truly resonates with your audience.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="third-page-bottom">
+      In the digital age, your brand's voice should not just echo — <br />it
+      should engage, inspire, and connect
+    </div>
+    <div class="bottom-line">
+      With my approach, your social strategy becomes a powerful tool for
+      business growth and lasting connections.
+    </div>
+    <footer>
+      <div class="navbar">
+        <div>
+          <a href="/final.html#about">About Me</a>
+          <a href="/page 5/page5.html">Marketing Consultant</a>
+          <a href="/page 2/page2.html" class="highlight">Expertise</a>
+          <a href="/page 3/page.html">Portfolio</a>
+          <a href="/page.1.html#contact">Contact</a>
+        </div>
+        <div class="copyright">© 2025 | SaloniSaloni</div>
+      </div>
+    </footer>
+  </body>
+</html>
